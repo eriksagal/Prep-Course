@@ -16,7 +16,7 @@ const nuevaResta = 10 - null === 10;
 const nuevaMultiplicacion = 10 * null === 0  ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 4;
+const nuevoModulo = 21 % 5 === 1;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -226,15 +226,21 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   
-  var num_positivo = "numero positivo";
-  var num_negativo = "numero negativo";
+  var num_positivo = "Es positivo";
+  var num_negativo = "Es negativo";
+
   if(numero > 0)
   {
     return num_positivo;
   }
-  else
+  else if(numero < 0)
   {
     return num_negativo;
+  }
+  else
+  {
+    return false;
+
   }
 }
 
@@ -260,7 +266,7 @@ function obtenerSaludo(nombre) {
   // "Martin" -> "Hola Martin!"
   // Tu código:
   var Hola = "Hola ";
-  var nombre_final =  Hola + nombre;
+  var nombre_final =  Hola + nombre +"!";
   return nombre_final;
 }
 
@@ -276,7 +282,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  var perimetro = 2*lado;
+  var perimetro = 4*lado;
   return perimetro;
   
 }
@@ -308,8 +314,8 @@ function esVocal(letra){
   //Escribe tu código aquí
 
   var dato_incorrecto = "Dato incorrecto";
-  var dato_correcto = "Dato correcto";
-  if(letra.length === 1 && (letra==='a' || letra==='b' || letra==='ac' || letra==='d' || letra==='e' ) )
+  var dato_correcto = "Es vocal";
+  if(letra.length === 1 && (letra==='a' || letra==='e' || letra==='i' || letra==='o' || letra==='u' ) )
   {
     return dato_correcto;
   }
@@ -334,7 +340,7 @@ module.exports = {
   nuevaString,
   nuevoNum,
   nuevoBool,
-  nuevaResta,
+  nuevaResta, 
   nuevaMultiplicacion,
   nuevoModulo,
   devolverString,
